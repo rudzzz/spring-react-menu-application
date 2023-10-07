@@ -1,7 +1,7 @@
 import { useFoodDataMutate } from "../../hooks/useFoodMutate";
 import { FoodData } from "../../interface/FoodData";
-import "./card.css"
 import { useState } from 'react';
+import "./modal.css"
 
 interface InputProps{
     label: string,
@@ -37,13 +37,13 @@ export function CreateModal(){
 
     return (
         <>
-            <div className="modal-overflow">
+            <div className="modal-overlay">
                <div className="modal-body">
                     <h2>Register a new item</h2>
                     <form className="form-container" action="">
                         <Input label="title" value={title} updatedValue={setTitle}/>
                         <Input label="price" value={price} updatedValue={setPrice}/>
-                        <Input label="image_url" value={image_url} updatedValue={setImage_url}/>
+                        <Input label="image" value={image_url} updatedValue={setImage_url}/>
                     </form>
                     <button onClick={submit} className="btn-secondary">Send</button>
                </div>
